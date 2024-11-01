@@ -3,23 +3,40 @@ const submission = {
   logic: [1, 2, 3],
   decision: ["win", "loss", "tie"],
 };
-
-console.log(submission.action[0]);
-console.log(submission.logic[0 + 2]);
-console.log(submission.decision[1]);
-
+let playerAction;
+let logic;
+let computerAction = Math.floor(Math.random() * 3);
+let computerLogic = Math.floor(Math.random() * 3);
 function btnRock() {
-  console.log(submission.action[0]);
+  playerAction = submission.action[0];
+  logic = submission.logic[0];
+  game();
 }
 function btnPaper() {
-  console.log(submission.action[1]);
+  playerAction = submission.action[1];
+  logic = submission.logic[1];
+
+  game();
 }
 function btnScissor() {
-  console.log(submission.action[2]);
+  playerAction = submission.action[2];
+  logic = submission.logic[2];
+
+  game();
 }
 
-function computerAction() {
-  let x = Math.floor(Math.random() * 3);
-  console.log(submission.action[x]);
-  console.log(x);
+function game() {
+  if (playerAction == submission.action[computerAction]) {
+    console.log(submission.decision[2]);
+  } else if (logic < submission.logic[computerLogic]) {
+    console.log(submission.decision[1]);
+  } else {
+    console.log(submission.decision[0]);
+  }
 }
+
+// } else if (logic < submission.logic[computerLogic]) {
+//   console.log(submission.decision[0]);
+// }
+
+document.getElementById("wins").innerText = submission.action;
