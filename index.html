@@ -7,9 +7,10 @@
     <title>Issiahs Rock Paper Scissor Game</title>
   </head>
   <body>
+    <h1>Issiahs Rock Paper Scissors Game</h1>
     <div id="gameContainer">
       <div id="playerOneChoice">
-        <p id="bolded">Player Ones Actions</p>
+        <p id="playerName">Player Ones Actions</p>
         <button onClick="btnRock()" label="Rock">Rock</button>
         <button onClick="btnPaper()" label="Paper">Paper</button>
         <button onClick="btnScissor()" label="Scissor">Scissor</button>
@@ -26,6 +27,21 @@
           <td id="ties">0</td>
         </table>
         <button onclick="trackerReset()" label="Reset">Reset</button>
+      </div>
+      <div>
+        <h2 id="eventLog">Event Log :</h2>
+      </div>
+      <div id="eventImages">
+        <table>
+          <tr>
+            <th>Your Choice</th>
+            <th>Outcome</th>
+            <th>Computers Choice</th>
+          </tr>
+          <td><div id="eventPlayer"></div></td>
+          <td><div id="eventOutcome"></div></td>
+          <td><div id="eventComputer"></div></td>
+        </table>
       </div>
     </div>
   </body>
