@@ -10,15 +10,22 @@
     <div id="gameContainer">
       <div id="playerOneChoice">
         <p id="bolded">Player Ones Actions</p>
-
         <button onClick="btnRock()" label="Rock">Rock</button>
         <button onClick="btnPaper()" label="Paper">Paper</button>
         <button onClick="btnScissor()" label="Scissor">Scissor</button>
       </div>
       <div id="scoreboard">
-        <p id="bolded">Scoreboard</p>
-        <p>Player One Win Counter</p>
-        <p id="wins"></p>
+        <table id="scoreboard">
+          <tr>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>Ties</th>
+          </tr>
+          <td id="wins">0</td>
+          <td id="losses">0</td>
+          <td id="ties">0</td>
+        </table>
+        <button onclick="trackerReset()" label="Reset">Reset</button>
       </div>
     </div>
   </body>
